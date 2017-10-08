@@ -1,0 +1,59 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{title}}!
+  </h1>
+  <img width="600" src="../assets/img/image_roles.jpg">
+</div>
+<div class="container" width="400">
+  <br/>
+  <div class="row">
+    <div class="col-xs-8 center">
+      <label for="search">Search user:</label>
+      <input name="search" type="text" class="form-control" (keyup)='searchUser($event)' placeholder="Search by name" />
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col-xs-8 center">
+      <table class="table table-bordered text-center">
+        <thead>
+        <colgroup span="3"></colgroup>
+        <tr>
+          <th rowspan="2">Name</th>
+          <th colspan="3">Role</th>
+        </tr>
+        <tr>
+          <th>Admin</th>
+          <th>Manager</th>
+          <th>Employee</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of users">
+          <td>{{item.name}}</td>
+          <td>
+            <input type="checkbox" [(ngModel)]="item.isAdmin" />
+          </td>
+          <td>
+            <input type="checkbox" [(ngModel)]="item.isManager" />
+          </td>
+          <td>
+            <input type="checkbox" [(ngModel)]="item.isEmployee" />
+          </td>
+        </tr>
+        <tr *ngIf="hasData && users.length === 0">
+          <td colspan="4">
+            <b>No Users</b>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xs-8 text-left">
+      <button type="button" class="btn btn-info btn-md" (click)="saveUSer()">Submit</button>
+    </div>
+  </div>
+</div>
+

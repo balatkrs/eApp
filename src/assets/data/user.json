@@ -1,0 +1,40 @@
+[
+    {
+        "name": "John",
+        "roles": [
+            "Manager",
+            "Admin"
+        ]
+    },
+    {
+        "name": "Johnson",
+        "roles": [
+            "Admin",
+            "Employee"
+        ]
+    },
+    {
+        "name": "Philips",
+        "roles": [
+            "Employee"
+        ]
+    },
+    {
+        "name": "Emily",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Mike",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Mikeal",
+        "roles": [
+            "Admin"
+        ]
+    }
+]
