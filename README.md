@@ -1,6 +1,6 @@
-# eApp
-User and role management
+# EyApp
 
+Steps:
 -- run npm install
 -- run npm install -g @angular/cli
 -- ng serve
