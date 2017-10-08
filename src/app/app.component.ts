@@ -14,9 +14,9 @@ export class AppComponent implements OnInit{
   users: any;
   hasData: boolean;
   roles: any = {
-    Admin: 'Admin',
-    Manager: 'Manager',
-    Employee: 'Employee'
+    Preparer: 'Preparer',
+    Reviewer: 'Reviewer'
+
   }
 
   constructor(private userService: UserService) {
@@ -37,9 +37,9 @@ export class AppComponent implements OnInit{
           let user: any = {
             name: item.name
           };
-          user.isAdmin = item.roles.some(x => x === this.roles.Admin);
-          user.isEmployee = item.roles.some(x => x === this.roles.Employee);
-          user.isManager = item.roles.some(x => x === this.roles.Manager);
+          user.isPreparer = item.roles.some(x => x === this.roles.Preparer);
+          user.isReviewer = item.roles.some(x => x === this.roles.Reviewer);
+
           this.users.push(user);
 
         });
@@ -59,15 +59,13 @@ export class AppComponent implements OnInit{
     this.users.forEach(item => {
       let user: any = { roles: [] };
       user.name = item.name;
-      if (item.isAdmin) {
-        user.roles.push(this.roles.Admin);
+      if (item.isPreparer) {
+        user.roles.push(this.roles.Preparer);
       }
-      if (item.isEmployee) {
-        user.roles.push(this.roles.Employee);
+      if (item.isReviewer) {
+        user.roles.push(this.roles.Reviewer);
       }
-      if (item.isManager) {
-        user.roles.push(this.roles.Manager);
-      }
+
       users.push(user);
     })
     console.log('User Data', users);
