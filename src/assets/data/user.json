@@ -2,39 +2,39 @@
     {
         "name": "John",
         "roles": [
-            "Manager",
-            "Admin"
+            "Preparer",
+            "Reviewer"
         ]
     },
     {
         "name": "Johnson",
         "roles": [
-            "Admin",
-            "Employee"
+            "Preparer"
+
         ]
     },
     {
         "name": "Philips",
         "roles": [
-            "Employee"
+            "Reviewer"
         ]
     },
     {
         "name": "Emily",
         "roles": [
-            "Manager"
+            "Reviewer"
         ]
     },
     {
         "name": "Mike",
         "roles": [
-            "Manager"
+            "Preparer"
         ]
     },
     {
         "name": "Mikeal",
         "roles": [
-            "Admin"
+            "Preparer"
         ]
     }
 ]
